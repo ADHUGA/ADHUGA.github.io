@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .course-card {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 10px;
+        }
+        .course-card:last-child {
+            border-bottom: none;
+        }
+        .course-title {
+            grid-column: span 2; /* Makes title span both columns */
+            font-size: 14px;
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .info {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .info strong {
+            color: #333;
+        }
+        .print-btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .print-btn:hover {
+            background: #0056b3;
+        }
+        /* Print-friendly styles */
+        @media print {
+            body {
+                background: none;
+            }
+            .container {
+                box-shadow: none;
+                width: 100%;
+                max-width: none;
+                padding: 0;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Spring 2025 Course Schedule</h1>
+
+        <!-- Course 1 -->
+        <div class="course-card">
+            <div class="course-title">CS 6750 - Human-Computer Interaction</div>
+            <div class="info"><strong>Credits:</strong> 3.000</div>
+            <div class="info"><strong>Grade Mode:</strong> Letter Grade</div>
+            <div class="info"><strong>CRN:</strong> 25247</div>
+            <div class="info"><strong>Level:</strong> Graduate</div>
+            <div class="info"><strong>Status:</strong> <span style="color: green;"><b>Registered</b></span></div>
+            <div class="info"><strong>Campus:</strong> Online</div>
+            <div class="info"><strong>Instructor:</strong> David A. Joyner</div>
+            <div class="info"><strong>Meeting Type:</strong> Lecture</div>
+            <div class="info"><strong>Schedule:</strong> TBA | Online</div>
+            <div class="info"><strong>Dates:</strong> Jan 06 - May 01</div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+            <div class="course-title">CS 6300 - Software Development</div>
+            <div class="info"><strong>Credits:</strong> 3.000</div>
+            <div class="info"><strong>Grade Mode:</strong> Letter Grade</div>
+            <div class="info"><strong>CRN:</strong> 25300</div>
+            <div class="info"><strong>Level:</strong> Graduate</div>
+            <div class="info"><strong>Status:</strong> <span style="color: green;"><b>Registered</b></span></div>
+            <div class="info"><strong>Campus:</strong> Online</div>
+            <div class="info"><strong>Instructor:</strong> Mark Guzdial</div>
+            <div class="info"><strong>Meeting Type:</strong> Lecture</div>
+            <div class="info"><strong>Schedule:</strong> TBA | Online</div>
+            <div class="info"><strong>Dates:</strong> Jan 06 - May 01</div>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">🖨️ Print Schedule</button>
+    </div>
+
+</body>
+</html>
