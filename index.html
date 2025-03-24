@@ -116,7 +116,7 @@ Feb 29, 2025 11:59 pm<br>
 </tr>
 </table>
 <a name="main_content"></a>
-<button id="printButton" onclick="printSchedule()" style="float: right; margin-right: 20px; padding: 10px 15px; font-size: 14px; cursor: pointer;">Print</button>
+<button id="printButton" onclick="printSchedule()" style="float: right; margin-right: 20px; padding: 10px 15px; font-size: 14px; cursor: pointer;">🖨️ Print</button>
 </DIV>
 <div class="pagebodydiv">
 <!--  ** END OF twbkwbis.P_OpenDoc **  -->
@@ -224,5 +224,26 @@ David A. Joyner<a href="mailto:david.joyner@gatech.edu"    target="David A. Joyn
 <DIV class="div5"></DIV>
 <DIV class="div6"></DIV>
 <div class="banner_copyright"> <br><h5><br></h5></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth <= 768;
+        }
+
+        function askForMobileRedirect() {
+            if (isMobile()) {
+                setTimeout(() => {
+                    let userChoice = confirm("Would you like to visit the mobile-friendly version of this page?");
+                    if (userChoice) {
+                        window.location.href = "mobile.html"; // Redirect to mobile version
+                    }
+                }, 500); // Small delay to ensure prompt appears properly
+            }
+        }
+
+        askForMobileRedirect();
+    });
+</script>
+
 </body>
 </html>
