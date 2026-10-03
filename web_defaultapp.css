@@ -626,7 +626,7 @@ BODY {
     margin-right: 2%;
     
     /* Correcting background image path */
-    background-image: url("web_bg_app.gif");  
+    background-image: url("web_bg_app2.gif");  
     background-repeat: no-repeat;
     background-position: top left; /* Adjust position as needed */
     background-size: auto; /* Keep original size or use 'cover' if full width is needed */
